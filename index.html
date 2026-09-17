@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI Архитекторы Роста — автоматизация процессов и AI-системы для бизнеса.">
+  <title>AI Архитекторы Роста — AI-диагностика</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">AI + АВТОМАТИЗАЦИЯ + БИЗНЕС-СИСТЕМА</div>
+        <h1>Освободите бизнес<br>от лишней работы.</h1>
+        <p class="lead">Проектируем цифровую инфраструктуру, которая забирает рутину, экономит время и помогает бизнесу расти.</p>
+        <a class="btn btn-primary" href="#calculator">Рассчитать потенциал</a>
+      </div>
+      <div class="dashboard">
+        <div class="window-dots"><i></i><i></i><i></i></div>
+        <div class="dashboard-label">ПОТЕНЦИАЛ В МЕСЯЦ</div>
+        <div class="dashboard-value" id="heroValue">100 800 ₽</div>
+        <div class="fake-chart"><span></span><span></span><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="calculator">
+      <div class="container narrow">
+        <div class="section-heading">
+          <div class="eyebrow">AI-ДИАГНОСТИКА</div>
+          <h2>Сначала считаем.<br>Потом внедряем.</h2>
+          <p>Оцените, сколько времени и денег потенциально можно вернуть бизнесу за счёт автоматизации повторяющихся процессов.</p>
+        </div>
+
+        <div class="calculator-card">
+          <div class="fields">
+            <label class="field"><span>Сотрудников в процессе</span><input id="employees" type="number" min="1" step="1" value="3"></label>
+            <label class="field"><span>Часов на сотрудника / месяц</span><input id="hours" type="number" min="0" step="1" value="80"></label>
+            <label class="field"><span>Стоимость часа, ₽</span><input id="rate" type="number" min="0" step="50" value="700"></label>
+            <label class="field"><span>Доля автоматизации, %</span><input id="automation" type="number" min="0" max="100" step="5" value="60"></label>
+          </div>
+
+          <div class="results" aria-live="polite">
+            <div class="result-card"><span>РУТИНА</span><strong id="routine">240 ч</strong></div>
+            <div class="result-card"><span>МОЖНО ОСВОБОДИТЬ</span><strong id="freed">144 ч</strong></div>
+            <div class="result-card result-highlight"><span>ПОТЕНЦИАЛ В МЕСЯЦ</span><strong id="value">100 800 ₽</strong></div>
+          </div>
+
+          <div class="lead-divider"></div>
+          <div class="form-heading">
+            <div class="eyebrow">СЛЕДУЮЩИЙ ШАГ</div>
+            <h3>Хотите понять, что именно можно автоматизировать?</h3>
+            <p>Оставьте контакты — мы посмотрим на процесс и покажем, где AI и автоматизация могут дать результат.</p>
+          </div>
+
+          <form id="leadForm" class="lead-form">
+            <input type="hidden" name="employees" id="hiddenEmployees">
+            <input type="hidden" name="hours_per_employee" id="hiddenHours">
+            <input type="hidden" name="hourly_rate" id="hiddenRate">
+            <input type="hidden" name="automation_percent" id="hiddenAutomation">
+            <input type="hidden" name="routine_hours" id="hiddenRoutine">
+            <input type="hidden" name="freed_hours" id="hiddenFreed">
+            <input type="hidden" name="potential_value" id="hiddenValue">
+
+            <div class="form-row">
+              <label class="field"><span>Ваше имя *</span><input name="name" type="text" autocomplete="name" placeholder="Как к вам обращаться" required></label>
+              <label class="field"><span>Телефон или Telegram *</span><input name="contact" type="text" autocomplete="tel" placeholder="+7... или @username" required></label>
+            </div>
+            <label class="field"><span>Что больше всего забирает время в бизнесе?</span><textarea name="process" rows="4" placeholder="Например: обработка заявок, расчёты, отчёты, переписка с клиентами..."></textarea></label>
+            <label class="field"><span>Компания / проект</span><input name="company" type="text" autocomplete="organization" placeholder="Необязательно"></label>
+            <label class="consent"><input name="consent" type="checkbox" required><span>Согласен на обработку данных для связи по заявке.</span></label>
+            <button class="btn btn-primary btn-full" type="submit">Получить AI-разбор процесса</button>
+            <div class="form-note">Без обязательств. Сначала разберём задачу и потенциал автоматизации.</div>
+          </form>
+
+          <div id="formSuccess" class="success" hidden>
+            <div class="success-icon">✓</div><h3>Заявка принята</h3>
+            <p>Спасибо. Ваш расчёт сохранён в заявке. Свяжемся с вами для дальнейшего разбора процесса.</p>
+          </div>
+          <div id="formError" class="error" hidden>Не удалось отправить заявку. Попробуйте ещё раз.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">AI АРХИТЕКТУРА РОСТА</div>
+          <h2>Не внедряем технологии<br>ради технологий.</h2>
+          <p>Проектируем систему под конкретные задачи бизнеса.</p>
+        </div>
+        <div class="system-grid">
+          <div class="system-card"><small>01</small><strong>Найти</strong><span>точки потерь</span></div>
+          <div class="system-card"><small>02</small><strong>Привлечь</strong><span>клиентов</span></div>
+          <div class="system-card"><small>03</small><strong>Конвертировать</strong><span>заявки</span></div>
+          <div class="system-card"><small>04</small><strong>Автоматизировать</strong><span>рутину</span></div>
+          <div class="system-card"><small>05</small><strong>Анализировать</strong><span>результаты</span></div>
+          <div class="system-card"><small>06</small><strong>Масштабировать</strong><span>систему</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container">AI Архитекторы Роста</div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
