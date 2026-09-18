@@ -1,1 +1,16 @@
-pages: stage: deploy script: - mkdir public - cp * public artifacts: paths: - public
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches:
+      - main 
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2
